@@ -22,6 +22,8 @@ import 'package:flutter_full_learn/101/statefull_life_cycle.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_field_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
+import 'package:flutter_full_learn/202/model_learn_view.dart';
+import 'package:flutter_full_learn/202/tab_learn.dart';
 import 'package:flutter_full_learn/demos/color_demos_view.dart';
 import 'package:flutter_full_learn/demos/color_life_cycle_view.dart';
 import 'package:flutter_full_learn/demos/my_collection_demos.dart';
@@ -44,6 +46,16 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+
+        bottomAppBarTheme: const BottomAppBarTheme(
+          shape: CircularNotchedRectangle(),
+        ),
+
+        tabBarTheme: const TabBarTheme(
+          labelColor: Colors.white,
+          unselectedLabelColor: Colors.red,
+          indicatorSize: TabBarIndicatorSize.label
+        ),
         inputDecorationTheme: const InputDecorationTheme(
           filled: true,
           fillColor:  Colors.white,
@@ -68,7 +80,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         )
       ),
-      home: const NavigationLearn(),
+      home: const ModelLearnView(),
     );
   }
 }
