@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PostModel {
+class PostModel1 {
   int? userId;
   int? id;
   String? title;
