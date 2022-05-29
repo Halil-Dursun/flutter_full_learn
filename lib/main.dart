@@ -22,7 +22,11 @@ import 'package:flutter_full_learn/101/statefull_life_cycle.dart';
 import 'package:flutter_full_learn/101/stateless_learn.dart';
 import 'package:flutter_full_learn/101/text_field_learn.dart';
 import 'package:flutter_full_learn/101/text_learn_view.dart';
+import 'package:flutter_full_learn/202/animated_learn_view.dart';
+import 'package:flutter_full_learn/202/form_learn_view.dart';
+import 'package:flutter_full_learn/202/image_learn_202.dart';
 import 'package:flutter_full_learn/202/model_learn_view.dart';
+import 'package:flutter_full_learn/202/oop_learn_view.dart';
 import 'package:flutter_full_learn/202/tab_learn.dart';
 import 'package:flutter_full_learn/202/theme/light_them.dart';
 import 'package:flutter_full_learn/202/theme_learn_view.dart';
@@ -87,7 +91,7 @@ class MyApp extends StatelessWidget {
       //     elevation: 0,
       //   )
       // ),
-      home: const ThemeLearnView(),
+      home: const FormLearnView(),
     );
   }
 }
