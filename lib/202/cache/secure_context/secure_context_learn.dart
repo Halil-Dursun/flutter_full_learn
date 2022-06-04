@@ -10,6 +10,7 @@ class SecureContextLearn extends StatefulWidget {
 
 class _SecureContextLearnState extends State<SecureContextLearn> {
   String _title = '';
+  final TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
@@ -18,6 +19,10 @@ class _SecureContextLearnState extends State<SecureContextLearn> {
   }
   Future<void> getSecureItems() async{
     _title = await _storage.read(key: _SecureKeys.token.name) ?? '';
+    if(_title.isNotEmpty){
+      print('adam daha önceden bu app i kullanmış');
+      _controller.text = _title;
+    }
     setState(() {
       
     });
@@ -40,6 +45,7 @@ class _SecureContextLearnState extends State<SecureContextLearn> {
         await _storage.write(key: _SecureKeys.token.name, value: _title);
       }, label: const Text('save'),),
       body: TextField(
+        controller: _controller,
         onChanged: saveItems,
       ),
     );
