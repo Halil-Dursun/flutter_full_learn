@@ -39,6 +39,7 @@ dependencies:
   json_annotation: ^4.5.0
   #Core
   equatable: ^2.0.3
+  collection: ^1.16.0
   #Cache
   shared_preferences: ^2.0.15
   flutter_secure_storage: ^5.0.2
